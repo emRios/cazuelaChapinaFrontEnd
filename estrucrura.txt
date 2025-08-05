@@ -1,0 +1,12 @@
+Controllers/
+  └── DashboardController.cs
+
+Services/
+  └── DashboardService.cs
+  └── IDashboardService.cs
+
+DTOs/
+  └── DashboardMetricasDto.cs
+
+Helpers/
+  └── ModuloAuthorizationAttribute.cs

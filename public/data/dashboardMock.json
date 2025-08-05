@@ -1,0 +1,17 @@
+{
+  "eventosRealizados": 6,
+  "ingresosTotales": 34135,
+  "gastosTotales": 19012,
+  "margenBeneficio": 15124,
+  "distribucionCostos": [
+    { "nombre": "Comida", "valor": 31.2 },
+    { "nombre": "Bebida", "valor": 11.46 },
+    { "nombre": "Barra libre", "valor": 11.34 },
+    { "nombre": "Varios", "valor": 13.62 },
+    { "nombre": "Personal", "valor": 32.38 }
+  ],
+  "relacionGastoUtilidad": [
+    { "name": "Gastos totales", "value": 19012 },
+    { "name": "Margen de beneficio", "value": 15124 }
+  ]
+}

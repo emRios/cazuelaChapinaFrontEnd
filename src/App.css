@@ -1,0 +1,120 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #222;
+}
+.contenedor-recuadro {
+  max-width: 540px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px #0002;
+  background: #f6f6f6;
+  border: 1.5px solid #e2e2e2;
+  margin: 0 auto;
+  padding: 12px 12px 8px 12px; 
+}
+
+.chip-row {
+  display: flex;
+  gap: 8px; 
+}
+
+.chip-btn {
+  padding: 6px 14px !important;
+  border-radius: 30px;
+  border: 1px solid #e2e8f0;
+  font-weight: 600;
+  font-size: 14px !important;
+  min-width: 64px;
+  letter-spacing: 0.2px;
+}
+
+.navbar-header {
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-title {
+  margin: 0;
+  font-size: 24px;
+}
+
+.navbar-row {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.navbar-logout {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  margin-left: auto;
+}

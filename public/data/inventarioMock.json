@@ -1,0 +1,22 @@
+[
+  {
+    "id": "masa_amarilla",
+    "nombre": "Masa de maíz amarillo",
+    "tipo": "materia_prima",
+    "unidad": "lb",
+    "stock": 120,
+    "minimo": 20,
+    "costo_unitario": 2.5,
+    "merma": 5
+  },
+  {
+    "id": "hoja_platano",
+    "nombre": "Hoja de plátano",
+    "tipo": "materia_prima",
+    "unidad": "unidad",
+    "stock": 70,
+    "minimo": 10,
+    "costo_unitario": 0.3,
+    "merma": 0
+  }
+]

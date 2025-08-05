@@ -1,0 +1,17 @@
+[
+  {
+    "email": "admin@cazuela.com",
+    "rol": "admin",
+    "modulos": ["inicio", "dashboard", "inventario"]
+  },
+  {
+    "email": "cliente@cazuela.com",
+    "rol": "cliente",
+    "modulos": ["inicio", "personalizar", "combos", "carrito"]
+  },
+  {
+    "email": "operador@cazuela.com",
+    "rol": "operador",
+    "modulos": ["inicio", "pedidos"]
+  }
+]
