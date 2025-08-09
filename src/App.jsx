@@ -10,8 +10,9 @@ import Dashboard from "./features/dashboard/Dashboard";
 import Inventario from "./features/inventario/Inventario";
 import Login from "./features/auth/Login";
 import Combos from "./features/combos/Combos"; 
-
-
+import { AppLayout } from "./ui/tailux/layouts/AppLayout";
+import MainLayout from "./ui/tailux/layouts/MainLayout";
+import ProtectedRoute from "./routes/ProtectedRoute";
 
 import { usePedidos } from "./features/pedidos/usePedidos"; 
 
@@ -46,8 +47,6 @@ function App() {
 
         <Routes>
           <Route path="/login" element={<Login />} />
-          <Route path="/inventario" element={<Inventario />} />
-          <Route path="/dashboard" element={<Dashboard />} />
 
           <Route
             path="/"
@@ -65,39 +64,75 @@ function App() {
           <Route
             path="/personalizar"
             element={
-              <div className="flex items-center justify-center min-h-[calc(100vh-180px)] px-4">
-                <div className="max-w-2xl w-full bg-white shadow-md rounded-lg p-6">
-                  <TamalSelector onAdd={agregarAlCarrito} />
-                  <BebidaSelector onAdd={agregarAlCarrito} />
+              <MainLayout>
+                <div className="flex items-center justify-center min-h-[calc(100vh-180px)] px-4">
+                  <div className="max-w-2xl w-full bg-white shadow-md rounded-lg p-6">
+                    <TamalSelector onAdd={agregarAlCarrito} />
+                    <BebidaSelector onAdd={agregarAlCarrito} />
+                  </div>
                 </div>
-              </div>
+              </MainLayout>
             }
           />
 
           <Route
             path="/combos"
-            element={<Combos onAdd={agregarAlCarrito} />}
+            element={
+              <MainLayout>
+                <Combos onAdd={agregarAlCarrito} />
+              </MainLayout>
+            }
           />
 
           <Route
             path="/carrito"
             element={
-              <div className="max-w-xl mx-auto p-6">
-                <Cart
-                  items={carrito}
-                  onRemove={removerItem}
-                  onConfirm={confirmarPedido}
-                />
+              <MainLayout>
+                <div className="max-w-xl mx-auto p-6">
+                  <Cart
+                    items={carrito}
+                    onRemove={removerItem}
+                    onConfirm={confirmarPedido}
+                  />
 
-                {/* Feedback de registro de pedido */}
-                {loading && <p className="text-blue-600 mt-2">Registrando pedido...</p>}
-                {error && <p className="text-red-600 mt-2">{error}</p>}
-                {exito && (
-                  <p className="text-green-600 mt-2">
-                    ¡Pedido registrado con éxito!
-                  </p>
-                )}
-              </div>
+                  {/* Feedback de registro de pedido */}
+                  {loading && <p className="text-blue-600 mt-2">Registrando pedido...</p>}
+                  {error && <p className="text-red-600 mt-2">{error}</p>}
+                  {exito && (
+                    <p className="text-green-600 mt-2">
+                      ¡Pedido registrado con éxito!
+                    </p>
+                  )}
+                </div>
+              </MainLayout>
+            }
+          />
+
+          <Route
+            path="/inventario"
+            element={
+              <ProtectedRoute
+                modulo="inventario"
+                element={
+                  <MainLayout>
+                    <Inventario />
+                  </MainLayout>
+                }
+              />
+            }
+          />
+
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute
+                modulo="dashboard"
+                element={
+                  <MainLayout>
+                    <Dashboard />
+                  </MainLayout>
+                }
+              />
             }
           />
         </Routes>
