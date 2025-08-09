@@ -4,9 +4,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import "./index.css";
-import "./main.css";
+import "./styles/main.css";
+import "./styles/tailux.css";
 import App from "./App.jsx";
-import { AuthProvider } from "./context/AuthContext"; 
+import { AuthProvider } from "./context/AuthContext";
+import './index.css'; // o como hayas llamado tu archivo de estilos
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
